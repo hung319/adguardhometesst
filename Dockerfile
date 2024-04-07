@@ -1,6 +1,5 @@
 FROM alpine
-RUN apk --no-cache add ca-certificates wget && 
-    wget -O- "https://static.adguard.com/adguardhome/release/AdGuardHome_linux_amd64.tar.gz" | tar xvz -C /opt/
+RUN apk --no-cache add ca-certificates wget && wget -O- "https://static.adguard.com/adguardhome/release/AdGuardHome_linux_amd64.tar.gz" | tar xvz -C /opt/
 
 WORKDIR /opt/AdGuardHome
 VOLUME ["/opt/AdGuardHome/data"]
